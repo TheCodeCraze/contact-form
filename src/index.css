@@ -23,6 +23,7 @@ body {
 
 body {
   height: 1029px;
+  background: var(--light-green);
   font-family: "Karla", sans-serif;
   display: grid;
   place-items: center;
