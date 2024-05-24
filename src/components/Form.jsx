@@ -3,19 +3,90 @@ import styles from "../styles/Form.module.css";
 const Form = () => {
   return (
     <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-      <div className={styles.content}></div>
-      <div className={styles.consent}>
-        <div className={styles.group}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Contact Us</h1>
+        <div className={styles.name}>
+          <div className={styles["first-name"]}>
+            <label className={styles.label} htmlFor="firstName">
+              First Name *
+            </label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              className={styles.input}
+            />
+            <p className={styles.error}>This field is required</p>
+          </div>
+          <div className={styles["last-name"]}>
+            <label className={styles.label} htmlFor="lastName">
+              Last Name *
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              className={styles.input}
+            />
+            <p className={styles.error}>This field is required</p>
+          </div>
+        </div>
+        <div className={styles.email}>
+          <label className={styles.label} htmlFor="email">
+            Email Address *
+          </label>
           <input
-            type="checkbox"
-            id="consent"
-            name="consent"
+            type="email"
+            id="email"
+            name="email"
             className={styles.input}
           />
-          <label className={styles.label}>
-            I consent to being contacted by the team
-          </label>
+          <p className={styles.error}>This field is required</p>
         </div>
+        <div className={styles["query-type"]}>
+          <label className={styles.label}>Query Type *</label>
+          <div className={styles.general}>
+            <input
+              type="radio"
+              id="general"
+              name="general"
+              className={styles.input}
+            />
+            <label className={styles.label} htmlFor="general">
+              General Enquiry
+            </label>
+          </div>
+          <div className={styles.support}>
+            <input
+              type="radio"
+              id="support"
+              name="support"
+              className={styles.input}
+            />
+            <label className={styles.label} htmlFor="support">
+              Support Request
+            </label>
+          </div>
+          <p className={styles.error}>Please select a query type</p>
+        </div>
+        <div className={styles.message}>
+          <label className={styles.label} htmlFor="message">
+            Message *
+          </label>
+          <textarea id="message" name="message" className={styles.input} />
+          <p className={styles.error}>This field is required</p>
+        </div>
+      </div>
+      <div className={styles.consent}>
+        <input
+          type="checkbox"
+          id="consent"
+          name="consent"
+          className={styles.input}
+        />
+        <label className={styles.label} htmlFor="consent">
+          I consent to being contacted by the team *
+        </label>
         <p className={styles.error}>
           To submit this form, please consent to being contacted
         </p>
@@ -27,25 +98,7 @@ const Form = () => {
   );
 };
 
-// Contact Us
-
-//   First Name
-//   This field is required
-
-//   Last Name
-//   This field is required
-
-//   Email Address
 //   Please enter a valid email address
-//   This field is required
-
-//   Query Type
-//   General Enquiry
-//   Support Request
-//   Please select a query type
-
-//   Message
-//   This field is required
 
 //   Message Sent!
 //   Thanks for completing the form. We'll be in touch soon!
