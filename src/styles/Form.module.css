@@ -161,8 +161,15 @@
   cursor: pointer;
 }
 
-.error {
-  display: none;
+.error-input {
+  border-color: var(--red);
+}
+
+.error-message {
+  font-weight: 400;
+  color: var(--red);
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
 .button {
