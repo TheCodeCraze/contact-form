@@ -7,7 +7,7 @@ export const formSchema = Yup.object().shape({
     .email("Please enter a valid email address")
     .required("This field is required"),
   message: Yup.string().required("This field is required"),
-  consent: Yup.boolean().required(
-    "To submit this form, please consent to being contacted"
-  ),
+  // consent: Yup.boolean().required(
+  //   "To submit this form, please consent to being contacted"
+  // ),
 });

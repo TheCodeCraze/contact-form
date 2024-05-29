@@ -13,7 +13,7 @@ const Form = () => {
       lastName: "",
       email: "",
       message: "",
-      consent: false,
+      // consent: false,
     },
     validationSchema: formSchema,
     onSubmit: handleSubmit,
@@ -146,8 +146,8 @@ const Form = () => {
           id="consent"
           name="consent"
           className={styles.checkbox}
-          checked={formik.values.consent}
-          onChange={formik.handleChange}
+          // checked={formik.values.consent}
+          // onChange={formik.handleChange}
         />
         <label className={styles.label} htmlFor="consent">
           I consent to being contacted by the team *
